@@ -28,7 +28,9 @@
     display: none;
 }
 
-.error { color: red; }
+.error { color: red;
+    display: none;
+}
 
 #success-subscriber {
     color: #000000;

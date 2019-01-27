@@ -25,28 +25,34 @@
     {
         if (response === "Email and source null")
         {
+            $("#email-error").css("display", "inline");
+            $("#source-error").css("display", "inline");
             document.getElementById("email-error").innerHTML = "This Field is Required";
             document.getElementById("source-error").innerHTML = "This Field is Required";
         }
         else if (response === "Source null")
         {
+            $("#source-error").css("display", "inline");
             document.getElementById("source-error").innerHTML = "This Field is Required";
         }
         else if (response === "Null email")
         {
+            $("#email-error").css("display", "inline");
             document.getElementById("email-error").innerHTML = "This Field is Required";
         }
         else if (response === "Invalid email")
         {
+            $("#email-error").css("display", "inline");
             document.getElementById("email-error").innerHTML = "Invalid Email";
         }
         else if (response === "Both valid") {
             $("#success-subscriber").css("display", "inline");
             document.getElementById("success-subscriber").innerHTML = "Thank You For Subscribing";
         }
-        else if (response === "Already subscribed") {
+        else if (response === "Already Subscribed")
+        {
             $("#email-error").css("display", "inline");
-            document.getElementById("success-subscriber").innerHTML = "Email already subscribed";
+            document.getElementById("email-error").innerHTML = "Email already subscribed";
         }
     }
 

@@ -27,16 +27,16 @@
                         <form id="subscription">
                             <div class="form-group">
                                 @Html.TextBoxFor(model => model.Email, "Email *", new { @class = "form-control", @placeholder = "Email*" })
-                                <label id="email-error" class="error"></label>
+                                <label id="email-error" class="error pl-2"></label>
                             </div>
                             <div class="form-group">
                                 @Html.DropDownListFor(model => model.Source, ViewBag.source as SelectList, "How do you heard about us *", new { @class = "form-control" })
-                                <label id="source-error" class="error"></label>
+                                <label id="source-error" class="error pl-2"></label>
                             </div>
                             <div class="form-group">
                                 @Html.TextAreaFor(model => model.Reason, new{ rows = "3" , @class="form-control", @placeholder="Reason for Subscribing (Optional)"})
                             </div>
-                            <p id="success-subscriber"></p>
+                            <p class="pl-2" id="success-subscriber"></p>
                             <button type="reset" id="submit" class="btn btn-block submit-form mt-3">SUBMIT</button>
                         </form>
                     </div>
