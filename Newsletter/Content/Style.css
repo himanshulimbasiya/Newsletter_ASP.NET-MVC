@@ -1,0 +1,36 @@
+﻿h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.submit-form{
+    background-color: #00b199;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-control {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-radius: 0px;
+    box-shadow: none !important;
+    outline: 0px !important;
+    -webkit-appearance: none;
+}
+
+.form-control:focus {
+    border-color: #00b199 !important;
+}
+
+.success {
+    display: none;
+}
+
+.error { color: red; }
+
+#success-subscriber {
+    color: #000000;
+    display: none;
+}

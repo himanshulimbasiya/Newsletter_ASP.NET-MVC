@@ -1,0 +1,51 @@
+﻿@model Newsletter.Models.SubscribersViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Newsletter</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/Scripts/main.js"></script>
+    <link href="~/Content/Style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6">
+                <div class="card mt-5">
+                    <div class="card-header text-center">
+                        <h3 class="pt-2">Subscribe</h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="subscription">
+                            <div class="form-group">
+                                @Html.TextBoxFor(model => model.Email, "Email *", new { @class = "form-control", @placeholder = "Email*" })
+                                <label id="email-error" class="error"></label>
+                            </div>
+                            <div class="form-group">
+                                @Html.DropDownListFor(model => model.Source, ViewBag.source as SelectList, "How do you heard about us *", new { @class = "form-control" })
+                                <label id="source-error" class="error"></label>
+                            </div>
+                            <div class="form-group">
+                                @Html.TextAreaFor(model => model.Reason, new{ rows = "3" , @class="form-control", @placeholder="Reason for Subscribing (Optional)"})
+                            </div>
+                            <p id="success-subscriber"></p>
+                            <button type="reset" id="submit" class="btn btn-block submit-form mt-3">SUBMIT</button>
+                        </form>
+                    </div>
+                    <div class="card-footer text-center">
+                        <h5>2019 Newsletter Himanshu</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

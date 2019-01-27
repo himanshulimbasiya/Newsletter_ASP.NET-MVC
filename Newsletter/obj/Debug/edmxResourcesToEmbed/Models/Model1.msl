@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Newsletter_SubscribersModelStoreContainer" CdmEntityContainer="Newsletter_SubscribersEntities">
+    <EntitySetMapping Name="Subscribers">
+      <EntityTypeMapping TypeName="Newsletter_SubscribersModel.Subscriber">
+        <MappingFragment StoreEntitySet="Subscribers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

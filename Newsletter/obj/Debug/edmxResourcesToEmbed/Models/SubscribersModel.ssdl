@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Newsletter_SubscribersModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Newsletter_Subscribers.dbo.Subscribers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Subscribers">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Email" />
+      <PropertyRef Name="Source" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Source" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Reason" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="Newsletter_SubscribersModelStoreContainer">
+    <EntitySet Name="Subscribers" EntityType="Self.Subscribers" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Subscribers].[Id] AS [Id], 
+    [Subscribers].[Email] AS [Email], 
+    [Subscribers].[Source] AS [Source], 
+    [Subscribers].[Reason] AS [Reason]
+    FROM [dbo].[Subscribers] AS [Subscribers]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
